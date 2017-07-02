@@ -10,12 +10,12 @@ curl -o Rocket.zip "https://ci.rocketmod.net/job/Rocket.Unturned%20Linux/lastSuc
 unzip -o -q Rocket.zip
 
 if [ -z "${ALLOC_0__PORT}" ] || [ "$((${ALLOC_0__PORT}-1))" != "${SERVER_PORT}" ]; then
-    printf "\n======================================"
-    printf "\n"
-    printf "   You need to add port $((${SERVER_PORT}+1)) as"
+    printf "\n\n======================================"
+    printf "\n\n"
+    printf "You need to add port $((${SERVER_PORT}+1)) as an\n"
     printf " additional allocation to the server."
-    printf "\n"
-    printf "======================================\n"
+    printf "\n\n"
+    printf "======================================\n\n"
     sleep 10
     exit 1
 fi
