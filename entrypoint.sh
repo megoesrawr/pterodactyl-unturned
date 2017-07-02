@@ -13,8 +13,16 @@ unzip -o -q Rocket.zip
 MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
 echo ":/home/container$ ${MODIFIED_STARTUP}"
 
-env
-sleep 5
+if [ -z "${ALLOC_0__PORT}" || "$((${ALLOC_0__PORT} - 1))" != "${SERVER_PORT}" ]; then
+    echo "======================================\n"
+    echo "\n"
+    echo "   You need to add port $((${SERVER_PORT} + 1)) as\n"
+    echo " additional allocation to the server.\n"
+    echo "\n"
+    echo "======================================\n"
+    sleep 10
+    exit 1
+fi
 
 # Run the Server
 ${MODIFIED_STARTUP}
