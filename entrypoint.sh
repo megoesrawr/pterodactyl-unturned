@@ -9,10 +9,6 @@ echo "Downloading RocketMod..."
 curl -o Rocket.zip "https://ci.rocketmod.net/job/Rocket.Unturned%20Linux/lastSuccessfulBuild/artifact/Rocket.Unturned/bin/Release/Rocket.zip"
 unzip -o -q Rocket.zip
 
-if [[ ! -s $FILE ]]; then
-    echo "Port" > "Servers/unturned/Server/Commands.dat"
-fi;
-
 # Replace Startup Variables
 MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
 echo ":/home/container$ ${MODIFIED_STARTUP}"
