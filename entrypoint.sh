@@ -13,6 +13,9 @@ unzip -o -q Rocket.zip
 MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
 echo ":/home/container$ ${MODIFIED_STARTUP}"
 
+env
+sleep 5
+
 # Run the Server
 ${MODIFIED_STARTUP}
 echo "=== If there was an error above, it can be safely ignored. ==="
