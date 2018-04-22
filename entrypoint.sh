@@ -28,4 +28,4 @@ echo ":/home/container$ ${MODIFIED_STARTUP}"
 
 # Run the Server
 ${MODIFIED_STARTUP}
-echo "=== If there was an error above, it can be safely ignored. ==="
+echo "If there was an error above when trying to stop your server, it can usually be ignored."
