@@ -19,6 +19,8 @@ unzip -o -q Rocket.zip
 # Unturned Workaround
 cp steam/linux32/steamclient.so /lib
 cp steam/linux64/steamclient.so /lib64
+ulimit -n 2048
+export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH
 
 # Replace Startup Variables
 MODIFIED_STARTUP=$(eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g'))
