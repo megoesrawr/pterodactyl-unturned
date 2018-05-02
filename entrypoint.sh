@@ -17,8 +17,8 @@ unzip -o -q Rocket.zip
 #fi
 
 # Unturned Workaround
-chmod 777 /lib
-chmod 777 /lib64
+chmod 777 steam/linux32/steamclient.so
+chmod 777 steam/linux64/steamclient.so
 cp -f steam/linux32/steamclient.so /lib
 cp -f steam/linux64/steamclient.so /lib64
 ulimit -n 2048
