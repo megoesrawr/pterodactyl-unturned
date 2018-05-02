@@ -17,8 +17,8 @@ unzip -o -q Rocket.zip
 #fi
 
 # Unturned Workaround
-cp steam/linux32/steamclient.so /lib
-cp steam/linux64/steamclient.so /lib64
+cp -f steam/linux32/steamclient.so /lib
+cp -f steam/linux64/steamclient.so /lib64
 ulimit -n 2048
 export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH
 
