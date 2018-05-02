@@ -12,6 +12,7 @@ USER container
 ENV  USER container
 ENV  HOME /home/container
 
+VOLUME ["/lib", "/lib64"]
 WORKDIR /home/container
 
 COPY ./entrypoint.sh /entrypoint.sh
