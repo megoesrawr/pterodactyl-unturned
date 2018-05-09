@@ -21,6 +21,8 @@ chmod 777 steam/linux32/steamclient.so
 chmod 777 steam/linux64/steamclient.so
 cp -f steam/linux32/steamclient.so /lib
 cp -f steam/linux64/steamclient.so /lib64
+chown container /lib/steamclient.so
+chown container /lib64/steamclient.so
 ulimit -n 2048
 export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH
 
